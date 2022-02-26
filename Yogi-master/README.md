@@ -1,2 +1,0 @@
-# Yogi
-WT Project
