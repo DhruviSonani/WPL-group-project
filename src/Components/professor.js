@@ -9,7 +9,7 @@ function professor(props) {
             <div className="blog_layout_grid sidebar_position_none">
                 <div className="row">
                     {(props.filteredData || props.tutorData) && (props.filteredData || props.tutorData).map(tutor => {
-                        return <div className="col-md-3 col-sm-4 col-xs-6 teacher-col prof-card"
+                        return <div key={tutor._id} className="col-md-3 col-sm-4 col-xs-6 teacher-col prof-card"
                             onClick={() => {
                                 console.log(tutor._id);
                                 props.toggleProfDetails(tutor._id)

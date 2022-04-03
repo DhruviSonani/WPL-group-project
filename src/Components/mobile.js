@@ -1,6 +1,6 @@
 import React from 'react'
 
-function mobile(props) {
+function Mobile(props) {
     return (
         <div className="col-xs-12 col-sm-12 visible-xs visible-sm">
             <div className="collapse navbar-collapse header-menu-mobile" id="header_menu_toggler">
@@ -40,4 +40,4 @@ function mobile(props) {
 }
 
 
-export default mobile
+export default Mobile
