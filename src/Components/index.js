@@ -1,0 +1,11 @@
+import desktop from './desktop'
+import Footer from './footer'
+import mobile from './mobile'
+import searchModal from './searchModal'
+import Import from './import'
+import professor from './professor'
+import features from './features'
+import Hero_image from './hero_image'
+import Header from './header'
+import professor_modal from './professor_modal'
+export { Import, desktop, Footer, mobile, searchModal, professor, features, Hero_image, Header, professor_modal }
