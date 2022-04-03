@@ -6,7 +6,8 @@ function desktop(props) {
             <div className="header_main_menu_wrapper clearfix" style={{ marginTop: '5px' }}>
                 <div className="pull-right hidden-xs">
                     <div className="search-toggler-unit">
-                        <div className="search-toggler" onClick={() => {
+                        <div className="search-toggler" onClick={(e) => {
+                            e.preventDefault()
                             props.searchToggleHanler(!props.searchBar)
                         }} ><i className="fa fa-search" /></div>
                     </div>

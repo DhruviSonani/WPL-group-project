@@ -28,10 +28,10 @@ function Mobile(props) {
                                 <button className="search-submit" onClick={async (e) => {
                                     e.preventDefault()
                                     props.searchToggleHanler(!props.searchBar)
-                                }}></button>
+                                }}><i className="fa fa-search" /></button>
                             </div>
                         </form>
-                        <div className="magic_line" style={{ maxWidth: '0px' }} />
+                        {/* <div className="magic_line" style={{ maxWidth: '0px' }} /> */}
                     </li>
                 </ul>
             </div>
