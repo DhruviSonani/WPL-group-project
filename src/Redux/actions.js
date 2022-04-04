@@ -25,9 +25,13 @@ export const findProf = ({ searchVal, profVal }) => {
         else {
 
             let filteredData = profVal.filter(value => {
+                const lower = value.expertise.map(element => {
+                    return element.toLowerCase();
+                });
                 return (value.name.toLowerCase().includes(searchVal.toLowerCase()) ||
                     value.about.toLowerCase().includes(searchVal.toLowerCase()) ||
-                    value.email.toLowerCase().includes(searchVal.toLowerCase())
+                    value.email.toLowerCase().includes(searchVal.toLowerCase()) ||
+                    lower.includes(searchVal.toLowerCase())
                 )
             });
             dispatch({ type: FILTERED_DATA, payload: filteredData });

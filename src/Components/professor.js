@@ -24,7 +24,9 @@ function professor(props) {
                                     <h4 className="title">{tutor.name}</h4>
                                 </a>
                                 <div className="content">
-                                    <p>{tutor.expertise}</p>
+                                    {tutor.expertise.map((item, index) => {
+                                        return <span>{item} {index == tutor.expertise.length - 1 ? "" : ","}  </span>
+                                    })}
                                 </div>
                             </div>
                             <div className="multiseparator" />
