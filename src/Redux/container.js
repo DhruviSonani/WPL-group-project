@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { fetchTutorData, findProf, searchToggleHanler, toggleProfDetails } from "./actions";
 import app from "../App";
-import { desktop, searchModal, mobile, professor, features, professor_modal } from '../Components'
+import { desktop, searchModal, mobile, professor, features, professor_modal, add_Update_Professor_modal } from '../Components'
 
 const MapStateToProps = (state) => ({
     tutorData: state.tutorData,
@@ -25,3 +25,4 @@ export const SearchModal = WrapComponent(searchModal)
 export const Professor = WrapComponent(professor)
 export const Features = WrapComponent(features)
 export const Professor_modal = WrapComponent(professor_modal)
+export const Add_Update_Professor_modal = WrapComponent(add_Update_Professor_modal)

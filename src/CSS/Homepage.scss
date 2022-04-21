@@ -6,6 +6,22 @@
     opacity: 1 !important;
 }
 
+.teacher_img{
+    position: relative;
+    .edit-prof{
+         
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;  
+
+        img{
+            width: 25px;
+        height: 25px;
+        }
+    }
+}
+
 .logo-unit .logo {
     font-family: Montserrat;
     color: #fff;

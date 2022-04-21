@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 function Professor_modal(props) {
 
     const data = props.tutorData.find(item => {
-        return item._id == props.profDetail
+        return item._id == props.profDetail.id
     })
     return (
         <Modal className='prof_detail_modal' isOpen={props.profDetail} toggle={() => props.toggleProfDetails(false)}>
@@ -14,8 +14,8 @@ function Professor_modal(props) {
             <ModalBody>
 
                 <p>{data.about}</p>
-                <p className='bold'>Interests : <span>{data.expertise.map(item => {
-                    return <span>{item}, </span>
+                <p className='bold'>Interests : <span>{data.courses.map(item => {
+                    return <span>{item.description}, </span>
                 })}</span> </p>
                 <pre className='d-flex'><b>Email ID : </b>{data.email}</pre>
                 <table>
@@ -25,11 +25,11 @@ function Professor_modal(props) {
                         <th>Is slot available?</th>
                     </tr>
                     {
-                        data.Availability.map(date => {
+                        data.availability.map(date => {
                             return <tr>
-                                <td>{date.Date}</td>
-                                <td><pre>{date.Start_time} - {date.End_time}</pre></td>
-                                <td>{date.Is_available ? "Yes" : "No"}</td>
+                                <td>{date.date}</td>
+                                <td><pre>{date.startTime} - {date.endTime}</pre></td>
+                                <td>{date.isAvailable ? "Yes" : "No"}</td>
                             </tr>
                         })
                     }

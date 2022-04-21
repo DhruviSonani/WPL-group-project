@@ -1,18 +1,21 @@
 import { TUTOR_DATA, PROF_DETAIL, FILTERED_DATA, SEARCH_BAR } from "./type";
 
 import _ from 'lodash'
+import axios from '../Common/axiosInstance'
+import { GETALLTUTOR, TUTOR } from "../Common/endPoints";
+
 export const fetchTutorData = () => {
     return (dispatch) => {
-        fetch('JSON/tutors.json', {
+        axios({
+            method: 'get',
+            url: TUTOR + GETALLTUTOR,
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             }
+        }).then((data) => {
+            dispatch({ type: TUTOR_DATA, payload: data.data });
         })
-            .then(res => res.json())
-            .then((data) => {
-                dispatch({ type: TUTOR_DATA, payload: data });
-            })
             .catch(console.log)
     };
 }
@@ -47,11 +50,12 @@ export const searchToggleHanler = (val) => {
 }
 
 export const toggleProfDetails = (val) => {
-    console.log("Val : ", val)
     return async (dispatch) => {
         dispatch({ type: PROF_DETAIL, payload: val })
     }
 }
+
+
 
 // const debouncedSearch = _.debounce(async function ({ searchVal, profVal }) {
 //     return async (dispatch) => {

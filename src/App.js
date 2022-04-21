@@ -4,6 +4,7 @@ import "./CSS/Homepage.scss";
 
 import _ from "lodash";
 import {
+  Add_Update_Professor_modal,
   Desktop,
   Features,
   Mobile,
@@ -205,7 +206,11 @@ class App extends Component {
         <Footer />
 
         <SearchModal onChangeSearchInput={(e) => this.onChangeSearchInput(e)} />
-        {this.props.profDetail && <Professor_modal />}
+        {this.props.profDetail && this.props.profDetail.type == "details" && <Professor_modal />}
+        {this.props.profDetail && this.props.profDetail.type == "edit" && <Add_Update_Professor_modal />}
+        {this.props.profDetail && this.props.profDetail.type == "add" && <Add_Update_Professor_modal />}
+
+        {/* del baki */}
       </div>
     );
   }

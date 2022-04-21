@@ -7,5 +7,9 @@ import professor from './professor'
 import features from './features'
 import Hero_image from './hero_image'
 import Header from './header'
-import professor_modal from './professor_modal'
-export { Import, desktop, Footer, mobile, searchModal, professor, features, Hero_image, Header, professor_modal }
+
+import professor_modal from './Modal/professor_modal'
+import add_Update_Professor_modal from './Modal/add_Update_Prof'
+
+
+export { Import, desktop, Footer, mobile, searchModal, professor, features, Hero_image, Header, professor_modal, add_Update_Professor_modal }
