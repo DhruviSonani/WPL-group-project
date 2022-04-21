@@ -1,0 +1,15 @@
+[
+    {
+        "id": "6261c1e96e10822f8c55a617",
+        "courseId": "3",
+        "date": "2022-04-24",
+        "startTime": "13:30",
+        "endTime": "15:30",
+        "duration": "2 hour",
+        "mode": "online",
+        "location": "Teams",
+        "studentId": 1,
+        "tutorId": "6261b0f639ca5a1cc07902b9",
+        "isAvailable": true
+    }
+]

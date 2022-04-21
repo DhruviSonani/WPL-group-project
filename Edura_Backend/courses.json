@@ -1,0 +1,92 @@
+[
+    {
+         "_id": 1
+        ,"description": "Web Programming Languages"
+        ,"days": ["Tuesday", "Thursday"]
+    }
+    ,{
+        "_id": 2
+       ,"description": "Machine Learning"
+       ,"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+   }
+   ,{
+         "_id": 3
+        ,"description": "Human-Computer Interactions"
+        ,"days": ["Monday", "Wednesday"]
+    }
+    ,{
+        "_id": 4
+       ,"description": "Computer Architecture"
+       ,"days": ["Tuesday", "Thursday"]
+   }
+   ,{
+        "_id": 5
+        ,"description": "Artificial Intelligence"
+        ,"days": ["Monday", "Wednesday"]
+    }
+    ,{
+        "_id": 6
+        ,"description": "Information Retrieval"
+        ,"days": ["Tuesday", "Thursday"]
+    }
+    ,{
+        "_id": 7
+        ,"description": "Natural Language Processing"
+        ,"days": ["Monday", "Wednesday"]
+    }
+    ,{
+        "_id": 8
+        ,"description": "Mobile Computing Systems"
+        ,"days": ["Tuesday", "Thursday"]
+    }
+    ,{
+        "_id": 9
+        ,"description": "Advanced Operating Systems"
+        ,"days": ["Monday", "Wednesday"]
+    }
+    ,{
+        "_id": 10
+        ,"description": "Algorithm Analysis and Data Structures"
+        ,"days": ["Tuesday", "Thursday"]
+    }
+    ,{
+        "_id": 11
+        ,"description": "Computer Networks"
+        ,"days": ["Monday", "Wednesday"]
+    }
+    ,{
+        "_id": 12
+        ,"description": "Performance of Computer Systems and Networks"
+        ,"days": ["Tuesday", "Thursday"]
+    }
+    ,{
+        "_id": 13
+        ,"description": "Database Design"
+        ,"days": ["Monday", "Wednesday"]
+    }
+    ,{
+        "_id": 14
+        ,"description": "Bioinformatics"
+        ,"days": ["Tuesday", "Thursday"]
+    }
+    ,{
+        "_id": 15
+        ,"description": "Data Mining"
+        ,"days": ["Monday", "Wednesday"]
+    }
+    ,{
+        "_id": 16
+        ,"description": "Computational Biology"
+        ,"days": ["Tuesday", "Thursday"]
+    }
+    ,{
+        "_id": 17
+        ,"description": "Computer Vision"
+        ,"days": ["Monday", "Wednesday"]
+    }
+    ,{
+        "_id": 18
+        ,"description": "Robotics"
+        ,"days": ["Tuesday", "Thursday"]
+    }
+]
