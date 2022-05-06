@@ -1,3 +1,7 @@
+// auth
+export const AUTHENTICATION = "AUTH"
+
+// tutor
 export const TUTOR_DATA = "TUTOR_DATA";
 export const FILTERED_DATA = "FILTERED_DATA"
 export const SEARCH_BAR = "SEARCH_BAR"

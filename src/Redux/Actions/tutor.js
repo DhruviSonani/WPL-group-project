@@ -1,8 +1,8 @@
-import { TUTOR_DATA, PROF_DETAIL, FILTERED_DATA, SEARCH_BAR } from "./type";
+import { TUTOR_DATA, PROF_DETAIL, FILTERED_DATA, SEARCH_BAR } from "../type";
 
 import _ from 'lodash'
-import axios from '../Common/axiosInstance'
-import { GETALLTUTOR, TUTOR } from "../Common/endPoints";
+import axios from '../../Common/axiosInstance'
+import { GETALLTUTOR, TUTOR } from "../../Common/endPoints";
 
 export const fetchTutorData = () => {
     return (dispatch) => {
