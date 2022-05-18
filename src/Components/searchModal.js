@@ -1,8 +1,9 @@
 import React from 'react'
 import {
-    Button, Modal, ModalFooter,
-    ModalHeader, ModalBody
+    Modal,
+    ModalBody
 } from "reactstrap"
+
 function SearchModal(props) {
     return (
         <div style={{
@@ -15,7 +16,7 @@ function SearchModal(props) {
                 modalTransition={{ timeout: 2000 }}>
                 <ModalBody>
                     <div className="search-title">Search</div>
-                    <form id="searchform" >
+                     <form id="searchform" >
                         <div className="search-wrapper">
                             <input placeholder="Search professor"
                                 type="text"

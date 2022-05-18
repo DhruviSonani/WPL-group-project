@@ -1,0 +1,25 @@
+.up_app{
+    color: #1d801b;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.appointment-time{
+    position: relative;
+
+    .trash-appt{
+        position: absolute;
+        right: 0;
+        margin-left: 0px;
+        top: 0;
+    }
+    .edit-appt{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 20px;
+    }
+    .Meeting-link{
+        margin-left: 5px;
+    }
+}

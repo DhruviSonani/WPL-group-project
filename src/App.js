@@ -5,7 +5,7 @@ import "./CSS/index.scss";
 
 const Routes = () => {
     let routes = useRoutes([
-        { path: '/', element: < Login /> },
+        { path: '/login', element: < Login /> },
         { path: '/register', element: <Register /> },
         { path: '/dashboard', element: < Dashboard /> }
     ]);

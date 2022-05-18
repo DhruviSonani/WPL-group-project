@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Edura_b, transdperantLogo } from "../Images";
+import { getLoginDetails, removeLoginDetails } from '../Common/utils'
 
 function Header(props) {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
@@ -38,9 +39,8 @@ function Header(props) {
         </button>
         <div className="col-xs-12 col-sm-12 visible-xs visible-sm">
           <div
-            className={`${
-              isNavCollapsed ? "collapse" : ""
-            }  navbar-collapse header-menu-mobile`}
+            className={`${isNavCollapsed ? "collapse" : ""
+              }  navbar-collapse header-menu-mobile`}
             id="header_menu_toggler"
           >
             <ul className="header-menu clearfix">
@@ -51,40 +51,59 @@ function Header(props) {
                 <a href="#">Home</a>
                 <div className="magic_line" style={{ maxWidth: "0px" }} />
               </li>
-              <li
-                id="menu-item-2008"
-                className="menu-item menu-item-type-post_type menu-item-object-page menu-item-2008"
-              >
-                <a href="#">Favorites</a>
-                <div className="magic_line" style={{ maxWidth: "0px" }} />
-              </li>
+
+              {
+                getLoginDetails().role == 2 &&
+                <li
+                  id="menu-item-2008"
+                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-2008"
+                >
+                  <a href="#" onClick={(e) => {
+                    e.stopPropagation()
+                    e.preventDefault()
+                    props.enableFavFlag({val: true})
+                    props.getFavoriteProfessors({ id: getLoginDetails()._id })
+                  }}
+                  >Favorites</a>
+                  <div className="magic_line" style={{ maxWidth: "0px" }} />
+                </li>
+              }
+
+
               <li
                 id="menu-item-1665"
                 className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1665"
               >
-                <a href="#">Logout</a>
+                <a href="#"
+                  onClick={() => {
+                    removeLoginDetails()
+                    window.location.reload()
+                  }}
+                >Logout</a>
                 <div className="magic_line" style={{ maxWidth: "0px" }} />
               </li>
-              <li>
-                <form role="search">
-                  <div className="search-wrapper">
-                    <input
-                      placeholder="Search professor"
-                      type="text"
-                      className="form-control search-input"
-                      onChange={(e) => props.onChangeSearchInput(e)}
-                    />
-                    <button
-                      className="search-submit"
-                      onClick={async (e) => {
-                        e.preventDefault();
-                        props.searchToggleHanler(!props.searchBar);
-                      }}
-                    ></button>
-                  </div>
-                </form>
-                <div className="magic_line" style={{ maxWidth: "0px" }} />
-              </li>
+              {
+                getLoginDetails().role != 1 &&
+                <li>
+                  <form role="search">
+                    <div className="search-wrapper">
+                      <input
+                        placeholder="Search professor"
+                        type="text"
+                        className="form-control search-input"
+                        onChange={(e) => props.onChangeSearchInput(e)}
+                      />
+                      <button
+                        className="search-submit"
+                        onClick={async (e) => {
+                          e.preventDefault();
+                          props.searchToggleHanler(!props.searchBar);
+                        }}
+                      ></button>
+                    </div>
+                  </form>
+                  <div className="magic_line" style={{ maxWidth: "0px" }} />
+                </li>}
             </ul>
           </div>
         </div>

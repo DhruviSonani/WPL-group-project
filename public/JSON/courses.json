@@ -1,0 +1,149 @@
+[
+    {
+        "value": 0,
+        "label": "Web Programming Languages",
+        "days": [
+            "Tuesday",
+            "Thursday"
+        ]
+    },
+    {
+        "value": 1,
+        "label": "Machine Learning",
+        "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+        ]
+    },
+    {
+        "value": 2,
+        "label": "Human-Computer Interactions",
+        "days": [
+            "Monday",
+            "Wednesday"
+        ]
+    },
+    {
+        "value": 3,
+        "label": "Computer Architecture",
+        "days": [
+            "Tuesday",
+            "Thursday"
+        ]
+    },
+    {
+        "value": 4,
+        "label": "Artificial Intelligence",
+        "days": [
+            "Monday",
+            "Wednesday"
+        ]
+    },
+    {
+        "value": 5,
+        "label": "Information Retrieval",
+        "days": [
+            "Tuesday",
+            "Thursday"
+        ]
+    },
+    {
+        "value": 6,
+        "label": "Natural Language Processing",
+        "days": [
+            "Monday",
+            "Wednesday"
+        ]
+    },
+    {
+        "value": 7,
+        "label": "Mobile Computing Systems",
+        "days": [
+            "Tuesday",
+            "Thursday"
+        ]
+    },
+    {
+        "value": 8,
+        "label": "Advanced Operating Systems",
+        "days": [
+            "Monday",
+            "Wednesday"
+        ]
+    },
+    {
+        "value": 9,
+        "label": "Algorithm Analysis and Data Structures",
+        "days": [
+            "Tuesday",
+            "Thursday"
+        ]
+    },
+    {
+        "value": 10,
+        "label": "Computer Networks",
+        "days": [
+            "Monday",
+            "Wednesday"
+        ]
+    },
+    {
+        "value": 11,
+        "label": "Performance of Computer Systems and Networks",
+        "days": [
+            "Tuesday",
+            "Thursday"
+        ]
+    },
+    {
+        "value": 12,
+        "label": "Database Design",
+        "days": [
+            "Monday",
+            "Wednesday"
+        ]
+    },
+    {
+        "value": 13,
+        "label": "Bioinformatics",
+        "days": [
+            "Tuesday",
+            "Thursday"
+        ]
+    },
+    {
+        "value": 14,
+        "label": "Data Mining",
+        "days": [
+            "Monday",
+            "Wednesday"
+        ]
+    },
+    {
+        "value": 15,
+        "label": "Computational Biology",
+        "days": [
+            "Tuesday",
+            "Thursday"
+        ]
+    },
+    {
+        "value": 16,
+        "label": "Computer Vision",
+        "days": [
+            "Monday",
+            "Wednesday"
+        ]
+    },
+    {
+        "value": 17,
+        "label": "Robotics",
+        "days": [
+            "Tuesday",
+            "Thursday"
+        ]
+    }
+]

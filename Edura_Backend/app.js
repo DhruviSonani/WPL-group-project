@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const Grid = require('gridfs-stream')
 
 var indexRouter = require('./routes/index');
 var tutorsRouter = require('./routes/tutors');
@@ -10,10 +11,17 @@ var studentRouter = require('./routes/students');
 var appointmentRouter = require('./routes/appointments');
 var courseRouter = require('./routes/courses');
 var authRouter = require('./routes/authentication');
+var favoriteRouter = require('./routes/favorites')
+var feedBackRouter = require('./routes/feedback')
 
 var app = express();
 var cors = require('cors');
 app.use(cors('*'))
+
+// for image upload ++ start
+app.use(express.json({limit : '50mb'}))
+app.use(express.urlencoded({limit:'50mb', extended:true}))
+// ++ end
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -31,11 +39,24 @@ app.use('/tutors', tutorsRouter);
 app.use('/students', studentRouter)
 app.use('/appointment', appointmentRouter)
 app.use('/courses', courseRouter)
+app.use('/favorite', favoriteRouter)
+app.use('/feedback', feedBackRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
 });
+
+// app.get('file/:filename', async(req, res)=>{
+//   try{
+//     const file = await gfs.file.findOne({filename:req.params.filename});
+//     const readStream = gfs.createRreadStream(file.filename);
+//     readStream.pipe(res)
+//   }
+//   catch(error){
+//     res.send("not found")
+//   }
+// })
 
 // error handler
 app.use(function (err, req, res, next) {

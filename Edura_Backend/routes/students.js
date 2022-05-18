@@ -15,9 +15,9 @@ router.get('/getAllStudents', function(req, res, next) {
     });
 });
 
-/* GET details of particular tutor*/
+/* GET details of particular student*/
 router.get('/getAllStudents/:id', function(req, res, next) {
-      collection.find({ _id: req.params.id }, function (err, student) {
+      collection.find({ userId: String(req.params.id) }, function (err, student) {
         if (err) throw err;
         res.json(student)
     });
