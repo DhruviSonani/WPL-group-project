@@ -1,4 +1,5 @@
 import React from 'react'
+import { getLoginDetails } from '../Common/utils'
 
 function Mobile(props) {
     return (
@@ -9,30 +10,42 @@ function Mobile(props) {
                         <a href="#">Home</a>
                         <div className="magic_line" style={{ maxWidth: '0px' }} />
                     </li>
-                    <li id="menu-item-2008" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-2008">
-                        <a href="#">Favorites</a>
-                        <div className="magic_line" style={{ maxWidth: '0px' }} />
-                    </li>
+                    {
+                        getLoginDetails().role == 2 &&
+                        <li id="menu-item-2008" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-2008">
+                            <a href="#" onClick={(e) => {
+                                e.stopPropagation()
+                                e.preventDefault()
+                                console.log("Click");
+                                props.enableFavFlag({val: true})
+                                props.getFavoriteProfessors({ id: getLoginDetails()._id })
+                            }}>Favorites</a>
+                            <div className="magic_line" style={{ maxWidth: '0px' }} />
+                        </li>
+                    }
+
                     <li id="menu-item-1665" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1665">
                         <a href="#">Logout</a>
                         <div className="magic_line" style={{ maxWidth: '0px' }} />
                     </li>
-                    <li>
-                        <form role="search" >
-                            <div className="search-wrapper">
-                                <input placeholder="Search professor" type="text" className="form-control search-input"
-                                    onChange={(e) =>
-                                        this.props.onChangeSearchInput(e)
-                                    }
-                                />
-                                <button className="search-submit" onClick={async (e) => {
-                                    e.preventDefault()
-                                    props.searchToggleHanler(!props.searchBar)
-                                }}><i className="fa fa-search" /></button>
-                            </div>
-                        </form>
-                        {/* <div className="magic_line" style={{ maxWidth: '0px' }} /> */}
-                    </li>
+                    {getLoginDetails().role !== 1 &&
+                        <li>
+                            <form role="search" >
+                                <div className="search-wrapper">
+                                    <input placeholder="Search professor" type="text" className="form-control search-input"
+                                        onChange={(e) =>
+                                            this.props.onChangeSearchInput(e)
+                                        }
+                                    />
+                                    <button className="search-submit" onClick={async (e) => {
+                                        e.preventDefault()
+                                        props.searchToggleHanler(!props.searchBar)
+                                    }}><i className="fa fa-search" /></button>
+                                </div>
+                            </form>
+                            {/* <div className="magic_line" style={{ maxWidth: '0px' }} /> */}
+                        </li>
+                    }
                 </ul>
             </div>
         </div>

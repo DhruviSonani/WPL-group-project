@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
-
+import {getLoginDetails} from '../../Common/utils'
+import {Book_appointment} from '../../Redux/container'
+import moment  from 'moment';
 
 function Professor_modal(props) {
 
     const data = props.tutorData.find(item => {
         return item._id == props.profDetail.id
     })
+
+
     return (
         <Modal className='prof_detail_modal' isOpen={props.profDetail} toggle={() => props.toggleProfDetails(false)}>
             <ModalHeader toggle={() => props.toggleProfDetails(false)}>{data.name}</ModalHeader>
@@ -15,7 +19,7 @@ function Professor_modal(props) {
 
                 <p>{data.about}</p>
                 <p className='bold'>Interests : <span>{data.courses.map(item => {
-                    return <span>{item.description}, </span>
+                    return <span>{item.label}, </span>
                 })}</span> </p>
                 <pre className='d-flex'><b>Email ID : </b>{data.email}</pre>
                 <table>
@@ -24,17 +28,17 @@ function Professor_modal(props) {
                         <th>Office Hours</th>
                         <th>Is slot available?</th>
                     </tr>
-                    {
+                    { getLoginDetails().role == 0 ?
                         data.availability.map(date => {
                             return <tr>
-                                <td>{date.date}</td>
+                                <td>{moment(date.date).format("MMM DD")}</td>
                                 <td><pre>{date.startTime} - {date.endTime}</pre></td>
-                                <td>{date.isAvailable ? "Yes" : "No"}</td>
+                                <td>{date.isAvailable  ? "Yes" : "No"}</td>
                             </tr>
                         })
+                        :
+                        <Book_appointment availability={data.availability}/>
                     }
-
-
                 </table>
 
             </ModalBody>

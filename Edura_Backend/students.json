@@ -1,0 +1,29 @@
+[
+    {
+         "_id": 1
+        ,"firstName": "Renil"
+        ,"lastName": "Gangwal"
+        ,"Address": "Dallas, TX"
+        ,"email": "renil.gangwal@utdallas.edu"
+        ,"Phone": "4699437761"
+        ,"courses": [1, 2, 3]
+    }
+    ,{
+        "_id": 2
+       ,"firstName": "Dhruvi"
+       ,"lastName": "Sonani"
+       ,"Address": "Dallas, TX"
+       ,"email": "dhruvi.sonani@utdallas.edu"
+       ,"Phone": "4699435327"
+       ,"courses": [1, 2, 3]
+   }
+   ,{
+         "_id": 3
+        ,"firstName": "Parth"
+        ,"lastName": "Sabhadiya"
+        ,"Address": "Dallas, TX"
+        ,"email": "parth.sabhadiya@utdallas.edu"
+        ,"Phone": "4699433601"
+        ,"courses": [1, 2, 3]
+    }
+]
