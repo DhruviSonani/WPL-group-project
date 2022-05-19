@@ -5,3 +5,4 @@ add/remove tutors to their favorites also can provide feedback/comments to tutor
 can sign-up for tutor account and can enter detailed information like Subject List, About
 Me, Working Hours, Upload Picture etc.
 
+Please find Project report for detailed information.
